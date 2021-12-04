@@ -1,18 +1,5 @@
 <script>
 	import Nav from '../components/UI/Nav.svelte';
-	import { supabase } from '../supabase/init';
-	import { session } from '$app/stores';
-	import { onMount } from 'svelte';
-	import { goto } from '$app/navigation';
-
-	onMount(async () => {
-		$session = supabase.auth.session();
-		$session ? goto('/') : goto('/sign-in');
-		supabase.auth.onAuthStateChange((event, sesh) => {
-			$session = sesh;
-		});
-		console.log('onmount ran');
-	});
 </script>
 
 <svelte:head>
@@ -28,9 +15,6 @@
 <div class="container mx-auto my-8">
 	<main>
 		<slot />
-		<pre>
-			{JSON.stringify($session, null, 2)}
-		</pre>
 	</main>
 </div>
 

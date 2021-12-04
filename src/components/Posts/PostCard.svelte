@@ -4,12 +4,12 @@
 
 <div class="card text-center shadow-md">
 	<figure class="px-10 pt-10">
-		<img src="https://source.unsplash.com/random/400x250" />
+		<img src="https://source.unsplash.com/random" />
 	</figure>
 	<div class="card-body">
-		<h2 class="card-title">{post.title}</h2>
+		<h2 class="card-title">{post.attributes.title}</h2>
 		<p>
-			{post.body}
+			{post.attributes.body}
 		</p>
 		<div class="justify-center card-actions">
 			<a href={`./posts/${post.id}`}
