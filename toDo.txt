@@ -1,0 +1,6 @@
+-add image hosting cloudinary
+-add tags
+-add link to github
+-add link to website
+-max-lengths to cards
+-remove sign in
