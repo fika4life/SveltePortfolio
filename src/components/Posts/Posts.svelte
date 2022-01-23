@@ -2,10 +2,18 @@
 	import PostCard from './PostCard.svelte';
 </script>
 
-<section class="posts my-8">
-	<div class="grid grid-cols-3 gap-5">
-		<PostCard />
-		<PostCard />
-		<PostCard />
-	</div>
-</section>
+<div class="posts-container">
+	<PostCard />
+	<PostCard />
+	<PostCard />
+</div>
+
+<style>
+	.posts-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+
+		justify-content: center;
+		align-items: center;
+	}
+</style>

@@ -1,0 +1,51 @@
+:root {
+	--darkest: #313b2f;
+	--next-darkest: #6a736f;
+	--next-lightest: #b0b6ba;
+	--lightest: #cbcfd1;
+	--primary: #ffd639;
+	--background-color: #f3f3f3;
+	--max-width: 1440px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0;
+	line-height: 1.4;
+}
+
+p {
+	line-height: 1.6;
+}
+
+h1 {
+	font-size: 48px;
+}
+h2 {
+	font-size: 40px;
+}
+h3 {
+	font-size: 32px;
+}
+h4 {
+	font-size: 26px;
+}
+h5 {
+	font-size: 20px;
+}
+
+p {
+	font-size: 16px;
+}
+
+button {
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+img {
+	width: 100%;
+}
