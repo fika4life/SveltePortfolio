@@ -19,7 +19,7 @@
 	}
 
 	.tag-line {
-		margin-top: 1rem;
+		margin-top: 0rem;
 		text-transform: uppercase;
 		font-weight: 400;
 		color: var(--next-darkest);

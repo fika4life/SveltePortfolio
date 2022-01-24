@@ -54,16 +54,56 @@
 		margin: 1rem 0 0 0;
 	}
 
+	.tags {
+		z-index: 1;
+	}
 	span.tag {
 		font-size: 12px;
 		text-transform: uppercase;
 		color: var(--darker);
 		font-weight: 800;
 		margin-right: 1rem;
+		/* highlighter effect */
+		position: relative;
+		width: max-content;
+		max-width: 100%;
+		z-index: 1;
+	}
+
+	span.tag::before {
+		content: '';
+		background-color: var(--primary);
+		height: 6px;
+		width: 100%;
+		display: block;
+		position: absolute;
+		bottom: 0px;
+		left: -4px;
+		z-index: -1;
 	}
 
 	.card-actions {
 		display: flex;
 		justify-content: space-between;
+	}
+
+	a > button.btn {
+		/* highlighter effect */
+		position: relative;
+		width: max-content;
+		max-width: 100%;
+		z-index: 2;
+	}
+
+	a > button.btn::after {
+		content: '';
+		background-color: var(--primary);
+		height: 6px;
+		width: 100%;
+		display: block;
+		position: absolute;
+		bottom: -4px;
+		left: -6px;
+		z-index: 1;
 	}
 </style>
