@@ -97,13 +97,15 @@
 
 	a > button.btn::after {
 		content: '';
-		background-color: var(--primary);
-		height: 6px;
+		background-color: rgba(0, 0, 0, 0);
+
+		height: 8px;
 		width: 100%;
 		display: block;
 		position: absolute;
-		bottom: -4px;
-		left: -6px;
-		z-index: 1;
+		bottom: -2px;
+		left: -2px;
+
+		box-shadow: var(--primary) -3px 4px 0 0;
 	}
 </style>
