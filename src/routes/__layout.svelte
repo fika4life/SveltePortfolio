@@ -31,12 +31,12 @@
 
 	body {
 		font-family: 'Nunito', sans-serif;
+		background-color: var(--background-color);
 	}
 
 	.main-container {
 		width: 100%;
 		max-width: var(--max-width);
 		margin: 0 auto;
-		background-color: var(--background-color);
 	}
 </style>
