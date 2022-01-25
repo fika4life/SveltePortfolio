@@ -1,12 +1,13 @@
-<!-- <script context="module">
+<script context="module">
 	export async function load({ page }) {
-		const url = 'http://localhost:1337/api/posts?populate=image';
+		const url = 'http://localhost:1337/api/posts?populate=*';
 		const response = await fetch(url);
 		const posts = await response.json();
-		//console.log(posts);
+		console.log(posts);
 		return { props: { posts } };
 	}
-</script> -->
+</script>
+
 <script>
 	import Posts from '../components/Posts/Posts.svelte';
 
@@ -17,4 +18,4 @@
 	export let posts;
 </script>
 
-<section id="posts"><Posts /></section>
+<section id="posts"><Posts {posts} /></section>

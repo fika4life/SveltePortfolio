@@ -1,11 +1,13 @@
 <script>
 	import PostCard from './PostCard.svelte';
+
+	export let posts;
 </script>
 
 <div class="posts-container">
-	<PostCard />
-	<PostCard />
-	<PostCard />
+	{#each posts.data as post}
+		<PostCard {post} />
+	{/each}
 </div>
 
 <style>

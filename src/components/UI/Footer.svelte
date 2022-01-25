@@ -1,7 +1,10 @@
-<footer>&copy; 2022 Fiona Karlsson</footer>
+<footer>
+	<p>&copy; 2022 Fiona Karlsson</p>
+</footer>
 
 <style>
 	footer {
 		text-align: center;
+		margin: 2rem;
 	}
 </style>

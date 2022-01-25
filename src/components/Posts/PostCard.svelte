@@ -1,5 +1,6 @@
 <script>
-	// export let post;
+	export let post;
+	console.log(post);
 </script>
 
 <div class="card">
@@ -14,17 +15,16 @@
 		</div>
 		<!-- <h2 class="card-title">{post.attributes.title}</h2> -->
 		<div class="card-text">
-			<h5 class="card-title">NFT preview card component</h5>
-			<!-- <p>
-			{post.attributes.body}
-		</p> -->
-			<p>Frontendmentor.io challenge</p>
+			<h5 class="card-title">{post.attributes.title}</h5>
+			<p>
+				{post.attributes.description}
+			</p>
 		</div>
 		<div class="card-actions">
-			<a href="https://github.com/fika4life/nft-preview-card-component-main"
+			<a href={post.attributes.URL} target="_blank"
 				><button class="btn btn-outline">Preview site</button></a
 			>
-			<a href="https://unruffled-swartz-12e92f.netlify.app/"
+			<a href={post.attributes.repository_url} target="_blank"
 				><button class="btn btn-primary">View code</button></a
 			>
 		</div>
@@ -44,7 +44,7 @@
 	}
 
 	.card-body {
-		padding: 1rem 1.6rem;
+		padding: 1rem 1.6rem 1.6rem 1.6rem;
 	}
 
 	.card-text {
@@ -107,5 +107,10 @@
 		left: -2px;
 
 		box-shadow: var(--primary) -3px 4px 0 0;
+	}
+
+	a > button.btn:hover {
+		cursor: pointer;
+		transform: scale(1.1);
 	}
 </style>
