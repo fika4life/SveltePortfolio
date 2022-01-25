@@ -10,8 +10,9 @@
 
 	<div class="card-body">
 		<div class="tags">
-			<span class="tag">HTML</span>
-			<span class="tag">CSS</span>
+			{#each post.attributes.tags.data as tag}
+				<span class="tag">{tag.attributes.name}</span>
+			{/each}
 		</div>
 		<!-- <h2 class="card-title">{post.attributes.title}</h2> -->
 		<div class="card-text">

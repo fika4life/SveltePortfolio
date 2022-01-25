@@ -3,7 +3,7 @@
 		const url = 'http://localhost:1337/api/posts?populate=*';
 		const response = await fetch(url);
 		const posts = await response.json();
-		console.log(posts);
+
 		return { props: { posts } };
 	}
 </script>
