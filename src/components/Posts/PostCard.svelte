@@ -74,7 +74,7 @@
 	span.tag::before {
 		content: '';
 		background-color: var(--primary);
-		height: 6px;
+		height: 8px;
 		width: 100%;
 		display: block;
 		position: absolute;
@@ -100,14 +100,14 @@
 		content: '';
 		background-color: rgba(0, 0, 0, 0);
 
-		height: 8px;
+		height: 6px;
 		width: 100%;
 		display: block;
 		position: absolute;
 		bottom: -2px;
 		left: -2px;
 
-		box-shadow: var(--primary) -3px 4px 0 0;
+		box-shadow: var(--primary) -2px 4px 0 0;
 	}
 
 	a > button.btn:hover {
