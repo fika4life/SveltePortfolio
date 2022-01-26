@@ -1,11 +1,16 @@
 <script>
 	export let post;
-	console.log(post);
+	let imageurl = post.attributes.image.data;
+	//post.attributes.image.data.attributes.url
 </script>
 
 <div class="card">
 	<div class="card-image">
-		<img src="https://source.unsplash.com/random" alt="" />
+		{#if imageurl}
+			<img src={imageurl.attributes.url} alt="" />
+		{:else}
+			<img src={undefined} alt="" />
+		{/if}
 	</div>
 
 	<div class="card-body">
