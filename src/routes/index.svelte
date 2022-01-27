@@ -1,6 +1,10 @@
 <script context="module">
+	import { urlRoot } from '$lib/url';
+
 	export async function load({ page }) {
-		const url = 'http://localhost:1337/api/posts?populate=*';
+		// const url = 'http://localhost:1337/api/posts?populate=*';
+		const url = `${urlRoot}/api/posts?populate=*`;
+		console.log(url);
 		const response = await fetch(url);
 		const posts = await response.json();
 

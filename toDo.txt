@@ -1,1 +1,7 @@
--add image hosting cloudinary
+index
+-add error handling for when no posts
+-add error handling when permissions denied
+
+post page design
+-slug
+
