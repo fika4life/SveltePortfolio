@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 MVP
 -add image hosting cloudinary
 -deploy backend to server
@@ -7,3 +8,12 @@ MVP
 2nd iteration
 -add about section
 -add sandbox section
+=======
+index
+-add error handling for when no posts
+-add error handling when permissions denied
+
+post page design
+-slug
+
+>>>>>>> 8be4f83819fbf0a17cb4ed36810cfe0237887d34
