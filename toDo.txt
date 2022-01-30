@@ -1,1 +1,9 @@
+MVP
 -add image hosting cloudinary
+-deploy backend to server
+-make responsive
+
+
+2nd iteration
+-add about section
+-add sandbox section
