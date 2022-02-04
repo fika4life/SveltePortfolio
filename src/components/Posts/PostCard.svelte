@@ -1,4 +1,5 @@
 <script>
+	import Button from '../UI/Button.svelte';
 	export let post;
 	let imageurl = post.attributes.image.data;
 	//post.attributes.image.data.attributes.url
@@ -27,12 +28,12 @@
 			</p>
 		</div>
 		<div class="card-actions">
-			<a href={post.attributes.URL} target="_blank"
-				><button class="btn btn-outline">Preview site</button></a
-			>
-			<a href={post.attributes.repository_url} target="_blank"
-				><button class="btn btn-primary">View code</button></a
-			>
+			<a href={post.attributes.URL} target="_blank">
+				<Button type="outline">Preview site</Button>
+			</a>
+			<a href={post.attributes.repository_url} target="_blank">
+				<Button type="primary">View code</Button>
+			</a>
 		</div>
 	</div>
 </div>

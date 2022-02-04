@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-MVP
--add image hosting cloudinary
--deploy backend to server
--make responsive
+refactor ui components
+-buttons
+-tags
 
-
-2nd iteration
--add about section
--add sandbox section
-=======
 index
 -add error handling for when no posts
 -add error handling when permissions denied
@@ -16,4 +9,3 @@ index
 post page design
 -slug
 
->>>>>>> 8be4f83819fbf0a17cb4ed36810cfe0237887d34
