@@ -18,7 +18,7 @@
 		column-gap: 4rem;
 		justify-content: center;
 		align-items: center;
-		max-width: 1200px;
+		max-width: var(--container-width);
 		margin: 0 auto;
 	}
 

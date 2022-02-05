@@ -1,11 +1,14 @@
 :root {
 	--darkest: #313b2f;
-	--next-darkest: #6a736f;
-	--next-lightest: #b0b6ba;
+	--next-darkest: #6c736f;
+	--third-lightest: #81878a;
+	--next-lightest: #b1b6ba;
 	--lightest: #cbcfd1;
 	--primary: #ffd639;
 	--background-color: #f3f3f3;
 	--max-width: 1440px;
+	--container-width: 1200px;
+	--border-radius: 4px;
 }
 
 h1,
@@ -36,6 +39,13 @@ h4 {
 }
 h5 {
 	font-size: 20px;
+}
+
+h6 {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: var(--next-lightest);
+	letter-spacing: 1px;
 }
 
 p {
