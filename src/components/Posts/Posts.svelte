@@ -26,4 +26,9 @@
 		text-decoration: none;
 		color: inherit;
 	}
+
+	a:hover {
+		transform: scale(1.05) rotate(-0.5deg);
+		transition: transform 0.05s ease-in-out;
+	}
 </style>
