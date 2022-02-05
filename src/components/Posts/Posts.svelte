@@ -1,4 +1,5 @@
 <script>
+	import { urlRoot } from '$lib/url';
 	import PostCard from './PostCard.svelte';
 
 	export let posts;
@@ -6,7 +7,7 @@
 
 <div class="posts-container">
 	{#each posts.data as post}
-		<PostCard {post} />
+		<a href={`/posts/{post.id}`}><PostCard {post} /></a>
 	{/each}
 </div>
 
@@ -19,5 +20,10 @@
 		align-items: center;
 		max-width: 1200px;
 		margin: 0 auto;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
 	}
 </style>
