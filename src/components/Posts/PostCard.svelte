@@ -1,5 +1,7 @@
 <script>
 	import Button from '../UI/Button.svelte';
+	import Tag from '../UI/Tag.svelte';
+
 	export let post;
 	let imageurl = post.attributes.image.data;
 	//post.attributes.image.data.attributes.url
@@ -17,7 +19,8 @@
 	<div class="card-body">
 		<div class="tags">
 			{#each post.attributes.tags.data as tag}
-				<span class="tag">{tag.attributes.name}</span>
+				<!-- <span class="tag">{tag.attributes.name}</span> -->
+				<Tag {tag} />
 			{/each}
 		</div>
 		<!-- <h2 class="card-title">{post.attributes.title}</h2> -->
@@ -31,8 +34,8 @@
 			<a href={post.attributes.URL} target="_blank">
 				<Button type="outline">Preview site</Button>
 			</a>
-			<a href={post.attributes.repository_url} target="_blank">
-				<Button type="primary">View code</Button>
+			<a href={`/posts/${post.id}`}>
+				<Button type="primary">More info</Button>
 			</a>
 		</div>
 	</div>
@@ -53,40 +56,15 @@
 	.card-body {
 		padding: 1rem 1.6rem 1.6rem 1.6rem;
 	}
+	.tags {
+		z-index: 1;
+	}
 
 	.card-text {
 		margin-bottom: 1.2rem;
 	}
 	.card-title {
 		margin: 1rem 0 0 0;
-	}
-
-	.tags {
-		z-index: 1;
-	}
-	span.tag {
-		font-size: 12px;
-		text-transform: uppercase;
-		color: var(--darker);
-		font-weight: 800;
-		margin-right: 1rem;
-		/* highlighter effect */
-		position: relative;
-		width: max-content;
-		max-width: 100%;
-		z-index: 1;
-	}
-
-	span.tag::before {
-		content: '';
-		background-color: var(--primary);
-		height: 8px;
-		width: 100%;
-		display: block;
-		position: absolute;
-		bottom: 0px;
-		left: -4px;
-		z-index: -1;
 	}
 
 	.card-actions {

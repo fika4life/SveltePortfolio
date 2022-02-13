@@ -25,10 +25,12 @@
 	a {
 		text-decoration: none;
 		color: inherit;
+
+		transition: transform 0.1s ease-in-out;
 	}
 
 	a:hover {
-		transform: scale(1.05) rotate(-0.5deg);
-		transition: transform 0.05s ease-in-out;
+		transform: scale(1.04) rotate(-0.5deg);
+		transition: transform 0.1s ease-in-out;
 	}
 </style>

@@ -18,21 +18,30 @@
 
 <script>
 	import Button from '../../components/UI/Button.svelte';
+	import Tag from '../../components/UI/Tag.svelte';
 	export let post;
 	const { title, description, body, createdAt, URL, repository_url } = post.data.attributes;
 	const { url } = post.data.attributes.image.data.attributes;
-	const tags = post.data.attributes.tags;
+	const tags = post.data.attributes.tags.data;
+	console.log(tags);
 </script>
 
 <!-- TODO TAGS -->
+
 <div class="post-container">
+	<p class="date">{createdAt}</p>
 	<div class="website-image">
 		<img src={url} alt={title} />
 	</div>
 	<div class="post-text">
 		<h2>{title}</h2>
-		<p class="description">{description}</p>
-		<p class="date">{createdAt}</p>
+		<!-- <p class="description">{description}</p> -->
+		<div class="tags">
+			{#each tags as tag}
+				<Tag {tag} />
+			{/each}
+		</div>
+
 		<p class="body">{body}</p>
 		<div class="links">
 			<a href={repository_url} target="_blank">
@@ -55,22 +64,30 @@
 		column-gap: 3rem;
 		background-color: #fff;
 		padding: 6rem;
-		height: 65vh;
 		position: relative;
 	}
 
-	.description {
+	p.date {
+		position: absolute;
+		top: 3rem;
+		right: 7rem;
+	}
+	/* .description {
 		color: var(--third-lightest);
+	} */
+
+	.tags {
+		margin-top: 0.2rem;
 	}
 	p {
-		margin-bottom: 0.5rem;
+		margin: 1.5rem 0rem;
 	}
 
 	.links {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
-		margin-top: 1rem;
+		margin-top: 2rem;
 	}
 
 	.fa.fa-times-circle {
