@@ -1,3 +1,7 @@
+understand difference between production and devleopment servers
+format date on post 
+
+
 refactor ui components
 -buttons
 -tags
