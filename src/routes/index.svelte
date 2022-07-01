@@ -1,7 +1,7 @@
 <script context="module">
 	import { urlRoot } from '$lib/url';
 
-	export async function load({ page }) {
+	export async function load({ fetch, params }) {
 		// const url = 'http://localhost:1337/api/posts?populate=*';
 		const url = `${urlRoot}/api/posts?populate=*`;
 

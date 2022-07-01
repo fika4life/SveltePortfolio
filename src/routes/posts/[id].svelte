@@ -1,8 +1,8 @@
 <script context="module">
 	import { urlRoot } from '$lib/url';
-	export async function load({ page }) {
+	export async function load({ fetch, params }) {
 		//get the page id
-		const id = page.params.id;
+		const id = params.id;
 
 		const url = `${urlRoot}/api/posts/${id}?populate=*`;
 		const response = await fetch(url);
