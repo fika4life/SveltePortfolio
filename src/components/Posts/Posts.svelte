@@ -13,13 +13,13 @@
 
 <style>
 	.posts-container {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		column-gap: 4rem;
-		justify-content: center;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
 		align-items: center;
 		max-width: var(--container-width);
 		margin: 0 auto;
+		gap: 3em;
 	}
 
 	a {
@@ -32,5 +32,11 @@
 	a:hover {
 		transform: scale(1.04) rotate(-0.5deg);
 		transition: transform 0.1s ease-in-out;
+	}
+
+	@media screen and (max-width: 1200px) {
+		.posts-container {
+			flex-direction: column;
+		}
 	}
 </style>
