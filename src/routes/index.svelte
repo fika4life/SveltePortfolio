@@ -2,11 +2,13 @@
 	import { urlRoot } from '$lib/url';
 
 	export async function load({ fetch, params }) {
-		// const url = 'http://localhost:1337/api/posts?populate=*';
 		const url = `${urlRoot}/api/posts?populate=*`;
+		// const url = `${urlRoot}/api/posts`;
+		// const url = 'http://localhost:1337/api/posts';
 
 		const response = await fetch(url);
 		const posts = await response.json();
+
 		return { props: { posts } };
 	}
 </script>
