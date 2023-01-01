@@ -7,7 +7,7 @@
 
 <div class="posts-container">
 	{#each posts.data as post}
-		<a href={`/posts/${post.id}`}><PostCard {post} /></a>
+		<a href={`/posts/${post.slug}`}><PostCard {post} /></a>
 	{/each}
 </div>
 

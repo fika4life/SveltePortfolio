@@ -1,10 +1,11 @@
 <script context="module">
 	import { urlRoot } from '$lib/url';
 	export async function load({ fetch, params }) {
-		//get the page id
-		const id = params.id;
+		//get the page slug
+		const slug = params.slug;
 
-		const url = `${urlRoot}/api/posts/${id}?populate=*`;
+		// const url = `${urlRoot}/api/posts/${id}?populate=*`;
+		const url = `${urlRoot}/api/posts`;
 		const response = await fetch(url);
 		const post = await response.json();
 		// console.log(post);

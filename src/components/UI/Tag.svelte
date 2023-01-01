@@ -2,7 +2,7 @@
 	export let tag;
 </script>
 
-<span class="tag">{tag.attributes.name}</span>
+<span class="tag">{tag.attributes.Name}</span>
 
 <style>
 	span.tag {

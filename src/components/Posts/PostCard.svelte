@@ -1,8 +1,10 @@
 <script>
+	import { urlRoot } from '$lib/url';
 	import Button from '../UI/Button.svelte';
 	import Tag from '../UI/Tag.svelte';
 
 	export let post;
+
 	let imageurl = post.attributes.image.data;
 	//post.attributes.image.data.attributes.url
 </script>
@@ -10,7 +12,7 @@
 <div class="card">
 	<div class="card-image">
 		{#if imageurl}
-			<img src={imageurl.attributes.url} alt="" />
+			<img src={urlRoot + imageurl.attributes.url} alt="" />
 		{:else}
 			<img src={undefined} alt="" />
 		{/if}
@@ -34,7 +36,7 @@
 			<a href={post.attributes.URL} target="_blank">
 				<Button type="outline">Preview site</Button>
 			</a>
-			<a href={`/posts/${post.id}`}>
+			<a href={urlRoot + '/' + post.attributes.slug}>
 				<Button type="primary">More info</Button>
 			</a>
 		</div>
