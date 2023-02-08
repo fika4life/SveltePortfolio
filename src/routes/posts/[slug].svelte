@@ -4,11 +4,11 @@
 		//get the page slug
 		const slug = params.slug;
 
-		// const url = `${urlRoot}/api/posts/${id}?populate=*`;
-		const url = `${urlRoot}/api/posts`;
+		const url = `${urlRoot}/api/posts/${slug}`;
+
 		const response = await fetch(url);
 		const post = await response.json();
-		// console.log(post);
+
 		return {
 			props: {
 				post
@@ -21,10 +21,10 @@
 	import Button from '../../components/UI/Button.svelte';
 	import Tag from '../../components/UI/Tag.svelte';
 	export let post;
+	console.log(post);
 	const { title, description, body, createdAt, URL, repository_url } = post.data.attributes;
 	const { url } = post.data.attributes.image.data.attributes;
 	const tags = post.data.attributes.tags.data;
-	console.log(tags);
 </script>
 
 <!-- TODO TAGS -->

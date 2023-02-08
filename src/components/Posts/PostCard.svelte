@@ -5,7 +5,7 @@
 
 	export let post;
 
-	let imageurl = post.attributes.image.data;
+	let imageurl = post.attributes.image.data[0];
 	//post.attributes.image.data.attributes.url
 </script>
 
@@ -36,7 +36,7 @@
 			<a href={post.attributes.URL} target="_blank">
 				<Button type="outline">Preview site</Button>
 			</a>
-			<a href={urlRoot + '/' + post.attributes.slug}>
+			<a href={'/posts/' + post.attributes.slug}>
 				<Button type="primary">More info</Button>
 			</a>
 		</div>
